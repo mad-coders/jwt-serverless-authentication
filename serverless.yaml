@@ -1,0 +1,34 @@
+tenant: maximdobrolinsky
+app: angular-auth-api
+
+service:
+ name: angular-auth-api
+
+plugins:
+ - serverless-offline
+
+provider:
+ name: aws
+ runtime: nodejs8.10
+ environment:
+    NODE_ENV: production
+
+package:
+  exclude:
+    - .aws/**
+    - .git/**
+    - src/**
+    - .build/**
+    - test/**
+    - nodemon.json
+    - README.md
+  excludeDevDependencies: false
+
+functions:
+ main:
+   handler: dist/lambda.handler
+   events:
+     - http:
+         method: any
+         path: /{any+}
+         cors: true
