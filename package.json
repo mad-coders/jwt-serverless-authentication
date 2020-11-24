@@ -39,7 +39,7 @@
     "@serverless/enterprise-plugin": "^1.0.7",
     "@types/bcryptjs": "2.4.2",
     "@types/lodash": "4.14.135",
-    "aws-lambda": "0.1.2",
+    "aws-lambda": "1.0.5",
     "aws-sdk": "2.483.0",
     "aws-serverless-express": "3.3.6",
     "bcryptjs": "2.4.3",
